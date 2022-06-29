@@ -1,16 +1,18 @@
 export default {
- template:`
+    template: `
  <header class="app-header">
-    <h1> ayooo</h1>
+   
     <nav> 
         <section> 
             <router-link to="/" active-class="active-link">
+            <h1> ayooo</h1>
             <div class="main-logo">
                 <img src="img/logo.png">
             </div>
+            </router-link>
           
-        </section>
-    </nav>
-     </header>
+            </section>
+        </nav>
+    </header>
 `,
-};
+}

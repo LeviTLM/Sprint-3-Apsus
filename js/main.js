@@ -1,19 +1,19 @@
+// import { router } from './routes.js'
 import appHeader from './cmps/app-header.cmp.js'
-import { router } from './routes.js'
-
-
+// import { createApp } from './lib/vue.js'
 const options = {
     app: '#app',
-    router,
+    // router,
     template: `
+    <h1>hey</h1>
     <section> 
-            <app-header />
-            <router-view />
+        <app-header />
+        <router-view />
     </section>
      `,
 
-    components:{
+    components: {
         appHeader,
-    }
+    },
 }
-new Vue(options)
+Vue.createApp(options).mount(app)

@@ -1,9 +1,9 @@
-// import { router } from './routes.js'
+import { router } from './routes.js'
 import appHeader from './cmps/app-header.cmp.js'
 // import { createApp } from './lib/vue.js'
 const options = {
     app: '#app',
-    // router,
+    router,
     template: `
     <h1>hey</h1>
     <section> 
@@ -17,3 +17,4 @@ const options = {
     },
 }
 Vue.createApp(options).mount(app)
+// app.use(router)

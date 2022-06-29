@@ -1,5 +1,4 @@
-import homePage from './pages/app-home.cmp.js';
-
+import homePage from './pages/app-home.cmp.js'
 
 const routes = [
     {
@@ -8,3 +7,7 @@ const routes = [
     },
 ];
 
+export const router = VueRouter.createRouter({
+    routes,
+    history: VueRouter.createWebHashHistory(),
+})

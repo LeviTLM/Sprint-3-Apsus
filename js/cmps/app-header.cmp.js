@@ -4,16 +4,19 @@ export default {
    
     <nav> 
         <section> 
-            <router-link to="/" active-class="active-link">
-                <div class="main-logo">
+            <!-- router link here when its ready -->
+                <div class="logo">
                 <img src="img/logo.png">
             </div>
             </router-link>
         </section>
         <section class="nav-links"></section>
-        <router-link active-class="active" class="header-link" to="/mail">Mail |</router-link>
-        <router-link class="header-link" to="/keep"> Keep |</router-link>
-        <router-link class="header-link" to="/book"> Books</router-link>
+        <!-- router link here when its ready -->
+        <h1>books</h1>
+        <!-- router link here when its ready -->
+        <h2>email</h2>
+        <!-- router link here when its ready -->
+        <h3>notes</h3>
         </nav>
     </header>
 `,

@@ -1,4 +1,4 @@
-import { bookService } from '../services/book-service.js'
+import { bookService } from '../services/book.services.js'
 
 export default {
     props: ['book'],

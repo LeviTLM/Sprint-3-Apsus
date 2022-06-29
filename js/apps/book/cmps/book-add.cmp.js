@@ -1,5 +1,4 @@
-import { bookService } from "../services/book-service.js"
-
+import { bookService } from '../services/book.services.js'
 
 export default {
     props: [],
@@ -25,29 +24,21 @@ export default {
     data() {
         return {
             value: null,
-            newBooksList: null
-
-        };
+            newBooksList: null,
+        }
     },
     methods: {
         showBooks() {
-            bookService.getNewBooksList(this.value)
-                .then(newBooksList => {
-                    this.newBooksList = newBooksList
-                })
+            bookService.getNewBooksList(this.value).then(newBooksList => {
+                this.newBooksList = newBooksList
+            })
         },
         addBook(idx) {
             this.$emit('addNewBook', this.newBooksList[idx])
             this.newBooksList = null
         },
-
-
     },
-    computed: {
-
-    },
-    created() { },
-    unmounted() { },
-};
-
-
+    computed: {},
+    created() {},
+    unmounted() {},
+}

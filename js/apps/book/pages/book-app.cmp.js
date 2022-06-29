@@ -1,7 +1,7 @@
-import { bookService } from '../services/book-service.js'
+import { bookService } from '../services/book.services.js'
 import bookList from '../cmps/book-list.cmp.js'
 import bookFilter from '../cmps/book-filter.cmp.js'
-import { eventBus } from '../services/eventBus-service.js'
+// import { eventBus } from '../services/eventBus-service.js'
 import bookAdd from '../cmps/book-add.cmp.js'
 
 export default {
@@ -51,10 +51,10 @@ export default {
         filterBook(filterBy) {
             this.filterBy = filterBy
         },
-        addNewBook(newBook){
+        addNewBook(newBook) {
             bookService.addGoogleBook(newBook)
             this.books.unshift(newBook)
-        }
+        },
     },
     computed: {
         booksToDisplay() {

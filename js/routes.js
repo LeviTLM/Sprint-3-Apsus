@@ -5,6 +5,11 @@ const routes = [
         path: '/',
         component: homePage,
     },
+
+    {
+        path: '/',
+        component: mailApp,
+    },
 ]
 
 export const router = VueRouter.createRouter({

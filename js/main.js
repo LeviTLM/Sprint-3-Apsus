@@ -1,19 +1,20 @@
-import appHeader from './cmps/app-header.cmp.js'
-import { router } from './routes.js'
-
+import appHeader from './cmps/app-header.cmp.js';
+import { router } from './routes.js';
 
 const options = {
-    app: '#app',
+    el: '#app',
     router,
     template: `
-    <section> 
+        <section>
+            <user-msg />
             <app-header />
             <router-view />
-    </section>
-     `,
-
-    components:{
+        </section>
+    `,
+    components: {
         appHeader,
+        userMsg
     }
-}
-new Vue(options)
+};
+
+new Vue(options);

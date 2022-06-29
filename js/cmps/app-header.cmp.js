@@ -11,8 +11,8 @@ export default {
             </router-link>
         </section>
         <section class="nav-links"></section>
-        <!-- router link here when its ready -->
-        <h1>books</h1>
+     
+      <router-link class="header-link" to ="/book">Books</router-link>
         <!-- router link here when its ready -->
         <h2>email</h2>
         <!-- router link here when its ready -->

@@ -3,10 +3,11 @@ import appHeader from './cmps/app-header.cmp.js'
 
 // import { createApp } from './lib/vue.js'
 const options = {
-    el: '#app',
+    app: '#app',
     router,
     template: `
     <section> 
+       
         <app-header />
         <router-view />
     </section>
@@ -16,5 +17,7 @@ const options = {
         appHeader,
     },
 }
-Vue.createApp(options).mount(app)
+
+Vue.createApp(options).use(router).mount('#app')
+
 // app.use(router)

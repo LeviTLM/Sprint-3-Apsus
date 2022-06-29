@@ -1,7 +1,7 @@
 import { bookService } from '../services/book.services.js'
 import bookList from '../cmps/book-list.cmp.js'
 import bookFilter from '../cmps/book-filter.cmp.js'
-// import { eventBus } from '../services/eventBus-service.js'
+import { eventBus } from '../../../services/eventBus-service.js'
 import bookAdd from '../cmps/book-add.cmp.js'
 
 export default {

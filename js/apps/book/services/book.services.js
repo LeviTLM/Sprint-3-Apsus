@@ -1,4 +1,4 @@
-import { utilService } from './util-service.js'
+import { utilService } from '../services/util-service.js'
 import { storageService } from './async-storage-service.js'
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?printType=books&q=effective%20javascript'

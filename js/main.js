@@ -5,7 +5,6 @@ const options = {
     app: '#app',
     router,
     template: `
-    <h1>hey</h1>
     <section> 
         <app-header />
         <router-view />

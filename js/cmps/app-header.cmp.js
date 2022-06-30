@@ -1,18 +1,18 @@
 // export default {
 //     template: `
 //  <header class="app-header">
-   
-//     <!-- <nav> 
-//         <section> 
+
+//     <!-- <nav>
+//         <section>
 //             <!-- router link here when its ready -->
 //                 <div class="logo">
-                    // <!-- NEXT
+// <!-- NEXT
 //                 <img src="img/logo.png">
 //             </div>
 //             </router-link>
 //         </section>
-//         <section class="nav-links"></section> 
-     
+//         <section class="nav-links"></section>
+
 //       <router-link class="header-link" to ="/book">Books</router-link>
 //         <!-- router link here when its ready -->
 //         <!-- <h2>email</h2>
@@ -22,7 +22,6 @@
 //     </header> --> --> -->
 // `,
 // }
-
 
 // export default {
 //     template: `
@@ -60,23 +59,24 @@
 
 export default {
     template: `
-        <header class="app-header">
-            <div class="logo">
-                <h3>Home page</h3>
-            </div>
-            <h1>
-                <img src="img/logo.png">
-            </h1>
-            <input type="text" placeholder="search">
-            <nav class="nav-bar">
-
-                <router-link to="/book">books</router-link>|
-                <router-link to="/about">About</router-link>|
-                <router-link to="/mail">Mail</router-link>|
-                <router-link to="/keep">notes</router-link>|
-
-            </nav>
-        </header>
-    
+    <header class="app-header">
+        <nav>
+            <section>
+                <router-link to="/" active-class="active-link" exact title="Home Page">
+                    <div class="logo">
+                        <img src="img/logo.png">
+                    </div>
+                </router-link>
+            </section>
+            <section class = "nav-links">
+                <router-link active-class="active" class="header-link" to="/book">Books </router-link>|
+                <router-link active-class="active" class="header-link" to="/mail">Mails</router-link>
+                <p>Emails</p>
+                <!-- router link here when its ready -->
+                <p>Notes</p>
+                
+            </section>
+        </nav>
+    </header>
     `,
 }

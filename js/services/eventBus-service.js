@@ -22,3 +22,4 @@ function emit(eventName, data) {
 
 // we got 2 funcs on and emit
 export const eventBus = { on, emit };
+

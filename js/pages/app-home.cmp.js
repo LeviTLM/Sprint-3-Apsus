@@ -11,6 +11,7 @@ export default {
 </div>
 
             <div class="main-email">
+                <router-link to="/mail">
                 <!-- router link here when its ready  -->
                 <p> Check your email
                 </p>

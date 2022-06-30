@@ -5,7 +5,7 @@ export default {
     props: ['mail'],
     template: `
         <section class="mail-preview">
-            <div @click>"switcher(mail)"
+            <div @click="switcher(mail)">
             <div class="mail-preview-container" :class="{bold: !mail.isRead, read: mail.isRead}">
                 <button class="star" @click.stop="starMail" :title="mail.isStarred ? 'Remove Star': 'Star'"> <span class="fa fa-star" :class="{'Starred':mail.isStarred,'black-stroke':!mail.isStarred}"></span> 
                 </button>
@@ -72,5 +72,22 @@ export default {
             }
         },
     },
-    unmounted() {},
+
+    methods: {
+        deleteMail(mailId) {
+            eventBus.$emit('delete', mailId)
+        },
+
+        switcher(mail) {
+            if (!mail.isDraft) this.$router.push('/mail/details/' + mail.id)
+            else eventBus.$emit('editDraft', mail)
+        },
+
+        starMail() {
+            const val = this.mail.isStarred ? false : true
+            mailService.editAndSave(this.mail, 'isStarred', val).then(() => {
+                eventBus.$emit('savedMail')
+            })
+        },
+    },
 }

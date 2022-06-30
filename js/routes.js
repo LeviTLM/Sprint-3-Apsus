@@ -27,12 +27,6 @@ const routes = [
     {
         path: '/mail',
         component: mailApp,
-        childern: [
-            {
-                path: 'details/:mailId',
-                component: mailDetails,
-            },
-        ],
     },
 ]
 

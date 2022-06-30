@@ -7,7 +7,7 @@ export default {
 </div>
         <div class="main-content">
             <div class="main-email">
-                <!-- router link here when its ready  -->
+                <router-link to="/mail">
                 <p> Click here to send emails if you want :)
                 </p>
                 <!-- router link here when its ready  -->
@@ -26,5 +26,5 @@ export default {
                 <!-- router link here when its ready  -->
             </div>
         </div>
-    </section>`
+    </section>`,
 }

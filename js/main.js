@@ -16,8 +16,7 @@ const options = {
 
     components: {
         appHeader,
-        appFooter
-        
+        appFooter,
     },
 }
 

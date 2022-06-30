@@ -23,6 +23,11 @@ const routes = [
     },
 
     // {
+    //     path: '/mail',
+    //     component: mailApp,
+    // },
+
+    // {
     //     path: '/',
     //     component: mailApp,
     // },

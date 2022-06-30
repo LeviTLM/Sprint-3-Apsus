@@ -6,7 +6,7 @@ export default {
     template: `
  <ul class="mail-list clean-list">
     <li v-for="mail in mails" :key="mail.id" class="mail-preview-container">
-        <mail-preview :mail="mail"/>
+        <mail-preview :mail="mail" />
     </li>
  </ul>
 `,

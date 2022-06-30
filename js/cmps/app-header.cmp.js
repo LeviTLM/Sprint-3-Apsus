@@ -60,24 +60,23 @@
 
 export default {
     template: `
-    <header class="app-header">
-        <nav>
-            <section>
-                <router-link to="/" active-class="active-link" exact title="Home Page">
-                    <div class="logo">
-                        <img src="img/logo.png">
-                    </div>
-                </router-link>
-            </section>
-            <section class = "nav-links">
-                <router-link active-class="active" class="header-link" to="/book">Books </router-link>|
-                <!-- router link here when its ready -->
-                <p>Emails</p>
-                <!-- router link here when its ready -->
-                <p>Notes</p>
-                
-            </section>
-        </nav>
-    </header>
+        <header class="app-header">
+            <div class="logo">
+                <h3>Home page</h3>
+            </div>
+            <h1>
+                <img src="img/logo.png">
+            </h1>
+            <input type="text" placeholder="search">
+            <nav class="nav-bar">
+
+                <router-link to="/book">books</router-link>|
+                <router-link to="/about">About</router-link>|
+                <router-link to="/mail">Mail</router-link>|
+                <router-link to="/keep">notes</router-link>|
+
+            </nav>
+        </header>
+    
     `,
 }

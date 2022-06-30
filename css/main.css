@@ -1,8 +1,6 @@
-@import url(cmps/app-header.css);
-@import url(cmps/app-home.css);
-@import url(cmps/user-msg.css);
-@import url(parts/base.css);
-@import url(parts/fonts.css);
-@import url(parts/helpers.css);
-@import url(apps/keep/note-preview.css);
+@import './book-app/parts/base.css';
+@import './book-app/cmps/app-header.css';
+@import './parts/base.css'; 
+
+
 

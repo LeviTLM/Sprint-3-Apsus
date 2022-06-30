@@ -6,14 +6,9 @@ export default {
        </div>
        <nav class="nav-bar">
        <router-link to="/">Home</router-link>|
-       <router-link to="/book">Books</router-link>|                  
-        <router-link to="/about">About</router-link>|
+       <router-link to="/email">Email</router-link>|                  
+        <router-link to="/notes">Notes</router-link>|
        </nav>
     </header>
    `,
-    data() {
-        return {}
-    },
-    methods: {},
-    computed: {},
 }

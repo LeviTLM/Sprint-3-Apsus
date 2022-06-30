@@ -17,6 +17,7 @@ export default {
 
 
     </div>
+    
  </section>
 `,
     data() {

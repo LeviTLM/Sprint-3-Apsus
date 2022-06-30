@@ -11,7 +11,8 @@ export default {
 <div @click="box('sent')" :class="{selectedBox:currBox === 'sent'}">Sent</div>
 <div @click="box('starred'" :class="{selectedBox:currBox === 'starred'}">Starred</div>
 <div @click="box('read')" :class="{selectedBox:currBox === 'read'}">Read</div>
-<!-- <div @click="box></div> -->
+<div @click="box('unread')" :class="{selectedBox:currBox === 'unread'}">Unread</div>
+<span>{{unreadCount}}</span>
 
 
 

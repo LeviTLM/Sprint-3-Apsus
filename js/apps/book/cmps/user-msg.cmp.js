@@ -1,4 +1,4 @@
-import { eventBus } from "../../../services/eventBus-service.js"
+import { eventBus } from '../services/eventBus-service.js'
 export default {
     template: `
  <section v-if="msg" class="user-msg" :class="msg.type">
@@ -9,8 +9,8 @@ export default {
     data() {
         return {
             unsubscribe: null,
-            msg: null
-        };
+            msg: '',
+        }
     },
     created() {
         this.unsubscribe = eventBus.on('show-msg', this.showMsg)
@@ -21,10 +21,10 @@ export default {
             setTimeout(() => {
                 this.msg = null
             }, 2000)
-        }
+        },
     },
     computed: {},
     unmounted() {
         this.unsubscribe()
     },
-};
+}

@@ -7,6 +7,21 @@ const loggedInUser = {
     fullname: 'Roy and Levi',
 }
 
+_createMails()
+
+export const mailService = {
+    query,
+    getUser,
+    editAndSave,
+    moveToTrash,
+    removeMail,
+    nameToShow,
+    getNextMailId,
+    getPreviousMailId,
+    saveMail,
+    getMailById,
+}
+
 function query() {
     return storageService.query(MAILS_KEY)
 }

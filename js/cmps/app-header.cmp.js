@@ -1,18 +1,18 @@
 // export default {
 //     template: `
 //  <header class="app-header">
-   
-//     <!-- <nav> 
-//         <section> 
+
+//     <!-- <nav>
+//         <section>
 //             <!-- router link here when its ready -->
 //                 <div class="logo">
-                    // <!-- NEXT
+// <!-- NEXT
 //                 <img src="img/logo.png">
 //             </div>
 //             </router-link>
 //         </section>
-//         <section class="nav-links"></section> 
-     
+//         <section class="nav-links"></section>
+
 //       <router-link class="header-link" to ="/book">Books</router-link>
 //         <!-- router link here when its ready -->
 //         <!-- <h2>email</h2>
@@ -22,7 +22,6 @@
 //     </header> --> --> -->
 // `,
 // }
-
 
 // export default {
 //     template: `
@@ -71,7 +70,7 @@ export default {
             </section>
             <section class = "nav-links">
                 <router-link active-class="active" class="header-link" to="/book">Books </router-link>|
-                <!-- router link here when its ready -->
+                <router-link active-class="active" class="header-link" to="/mail">Mails</router-link>
                 <p>Emails</p>
                 <!-- router link here when its ready -->
                 <p>Notes</p>

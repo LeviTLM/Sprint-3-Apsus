@@ -1,4 +1,4 @@
-import { mailService } from '../services/mail.service.js'
+import { mailService } from '../services/mail.services.js'
 import { eventBus } from '../../../services/eventBus-service.js'
 
 export default {

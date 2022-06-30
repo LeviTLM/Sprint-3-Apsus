@@ -1,7 +1,6 @@
 import { router } from './routes.js'
 import appHeader from './cmps/app-header.cmp.js'
 
-// import { createApp } from './lib/vue.js'
 const options = {
     app: '#app',
     router,

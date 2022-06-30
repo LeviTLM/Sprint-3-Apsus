@@ -61,8 +61,10 @@ export default {
             this.$router.push('/mail')
         },
 
-        // Fix when we get to the Save Note part
-        // saveNote(){}
+        saveNote() {
+            var msg = JSON.stringify(this.mail)
+            this.$router.push(`/keep.notefrommail/${msg}`)
+        },
     },
     computed: {
         contactToShow() {
@@ -85,5 +87,20 @@ export default {
             return `${date}`.substring(4, 21)
         },
     },
-    unmounted() {},
+    watch: {
+        '$route.params.mailId': {
+            handler() {
+                const { mailId: mailId } = this.$route.params
+                mailService.getMailById(mailId).then(mail => {
+                    this.mail = mail
+                    mailService.editAndSave(this.mail, 'isRead', true).then(() => {
+                        eventBus.$emit('savedMail')
+                    })
+                })
+                mailService.getMailById(mailId).then(mailId => (this.nextMailId = mailId))
+                mailService.getPreviousMailId(mailId).then(mailId => (this.previousMailId = mailId))
+            },
+            immediate: true,
+        },
+    },
 }

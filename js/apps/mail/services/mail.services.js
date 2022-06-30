@@ -83,12 +83,12 @@ function _createMails() {
                 subject: 'Test 123',
                 body: 'Trying to test our mail app',
                 isRead: true,
-                sentAt: Date.now(),
+                sentAt: 16301790901200,
                 to: 'testroy@levi.com',
             },
         ]
 
-        utilService.saveToStorage(mails, mails)
+        utilService.saveToStorage(MAILS_KEY, mails)
     }
     return mails
 }

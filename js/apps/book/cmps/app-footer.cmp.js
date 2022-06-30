@@ -4,9 +4,4 @@ export default {
        <p>&copy; Copyrights 2022</p>
     </footer>
    `,
-    data() {
-        return {}
-    },
-    methods: {},
-    computed: {},
 }

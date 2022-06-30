@@ -1,28 +1,24 @@
 export default {
-    props: ['book'],
-
+    props: ["book"],
     template: `
-<p>Title: {{book.title}}</p>
-<p v-bind:class="priceColor">Price: {{book.listPrice.amount}}</p>
-<p v-bind:class="isOnSale">{{isOnSale}}</p>
+    <div  class="book">
+    <img :src="bookImgUrl" alt="">
 
-    `,
-
+    <p>{{book.title}}</p>
+    <p :class="checkPrice">{{book.listPrice.amount}} {{book.listPrice.currencyCode}}</p>
+    </div>
+`,
+    data() {
+        return {}
+    },
+    methods: {},
     computed: {
-        getCurrency() {
-            const formatter = new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-            })
-
-            formatter.format(2500)
+        bookImgUrl() {
+            return `${this.book.thumbnail}`
         },
-        priceColor() {
+        checkPrice() {
             return { low: this.book.listPrice.amount < 20, high: this.book.listPrice.amount > 150 }
-        },
-
-        isOnSale() {
-            if (this.book.listPrice.isOnSale) return 'Sale'
         },
     },
 }
+

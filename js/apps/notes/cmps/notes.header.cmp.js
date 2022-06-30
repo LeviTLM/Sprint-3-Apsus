@@ -2,7 +2,7 @@ export default {
     template: `
         <header class="app-header">
             <div class="logo">
-                <h3>keep</h3>
+                <h3>notes</h3>
             </div>
             <h1>logo</h1>
             <input type="text" placeholder="search">

@@ -1,25 +1,32 @@
 export default {
     template: `
-    <section class="book-filter">
-        <!-- <pre>{{filterBy}}</pre> -->
-        <input placeholder="Search a book.." type="text" v-model="filterBy.title" @input="filter">
-    </section>
-`,
+       <section class="book-filter">
+    <input placeholder="title" type="text" v-model="filterBy.title" @input="filter" ref="textInput">
+    <input type="number" placeholder="min-price" v-model.number="filterBy.fromPrice" @input="filter" id="min-price" name="min-price "
+       min="0" >
+    <input type="number" placeholder="max-price" v-model.number="filterBy.toPrice" @input="filter" id="max-price" name="max-price "
+       min="1" >
+
+ </section>
+    `,
     data() {
         return {
             filterBy: {
-                title: '',
-                // fromPrice: 0,
-                // toPrice: Infinty,
+                title: "",
+                fromPrice: 0,
+                toPrice: null,
             },
         }
     },
-    created() {},
+    mounted() {
+        this.$refs.textInput.focus()
+    },
     methods: {
         filter() {
-            this.$emit('filtered', this.filterBy)
+            if(!this.filterBy.toPrice){
+                this.filterBy.toPrice=33333609
+            }
+            this.$emit("filtered", { ...this.filterBy })
         },
     },
-    computed: {},
-    unmounted() {},
 }

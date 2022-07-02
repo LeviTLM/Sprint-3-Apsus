@@ -4,55 +4,60 @@ export const storageService = {
     post,
     put,
     remove,
-    postMany,
+    postMany
 }
 
 // gets all the items
 function query(entityType) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || []
-    return Promise.resolve(entities)
+    return Promise.resolve(entities);
 }
 
 //get an item by id
 function get(entityType, entityId) {
-    return query(entityType).then(entities => entities.find(entity => entity.id === entityId))
+    return query(entityType)
+        .then(entities => entities.find(entity => entity.id === entityId))
 }
 
-//create new item // Add
+//create new item
 function post(entityType, newEntity) {
     newEntity.id = _makeId()
-    return query(entityType).then(entities => {
-        entities.push(newEntity)
-        _save(entityType, entities)
-        return newEntity
-    })
+    return query(entityType)
+        .then(entities => {
+            entities.push(newEntity);
+            _save(entityType, entities)
+            return newEntity;
+        })
 }
 
 //create new items
 function postMany(entityType, newEntities) {
-    return query(entityType).then(entities => {
-        entities.push(...newEntities)
-        _save(entityType, entities)
-        return entities
-    })
+    return query(entityType)
+        .then(entities => {
+            entities.push(...newEntities);
+            _save(entityType, entities)
+            return entities;
+        })
 }
 
 //update an item
 function put(entityType, updatedEntity) {
-    return query(entityType).then(entities => {
-        const idx = entities.findIndex(entity => entity.id === updatedEntity.id)
-        entities.splice(idx, 1, updatedEntity)
-        _save(entityType, entities)
-        return updatedEntity
-    })
+    return query(entityType)
+        .then(entities => {
+            const idx = entities.findIndex(entity => entity.id === updatedEntity.id);
+            entities.splice(idx, 1, updatedEntity)
+            _save(entityType, entities)
+            return updatedEntity;
+        })
 }
 //remove an item
 function remove(entityType, entityId) {
-    return query(entityType).then(entities => {
-        const idx = entities.findIndex(entity => entity.id === entityId)
-        entities.splice(idx, 1)
-        _save(entityType, entities)
-    })
+    return query(entityType)
+        .then(entities => {
+            const idx = entities.findIndex(entity => entity.id === entityId);
+            entities.splice(idx, 1)
+            _save(entityType, entities)
+        })
 }
 
 //save to local storage
@@ -61,10 +66,10 @@ function _save(entityType, entities) {
 }
 
 function _makeId(length = 8) {
-    var text = ''
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     for (var i = 0; i < length; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length))
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-    return text
+    return text;
 }

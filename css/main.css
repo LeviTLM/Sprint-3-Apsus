@@ -1,10 +1,8 @@
-/* @import './book-app/parts/base.css'; */
-/* @import './book-app/cmps/app-header.css'; */
-@import './parts/base.css';
+@import "./parts/base.css";
 @import "./parts/fonts.css";
-@import "./parts/helpers.css";
-@import "./apps/keep/note-preview.css";
-/* @import url(parts/base.css); */
-/* @import url(parts/fonts.css); */
-/* @import url(parts/helpers.css); */
-/* @import url(apps/keep/note-preview.css); */
+@import "./cmps/app-header.css";
+@import "./apps/books/book-app.css";
+@import './cmps/app-header.css';
+@import './apps/keep/note-app.css';
+@import './apps/mail/mail-app.css';
+@import './cmps/app-home.css'

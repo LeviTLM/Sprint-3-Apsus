@@ -1,0 +1,110 @@
+@import './mail-menu.css';
+@import './mail-details.css';
+@import './mail-add.css';
+@import './mail-preview.css';
+
+.mail-app {
+  flex-direction: column;
+  position: relative;
+}
+
+.mail-main {
+  max-width: 100vw;
+  min-height: 90vh;
+  position: relative;
+}
+
+.mail-list-container {
+  width: 70vw;
+  flex-grow: 1;
+}
+
+.mail-header {
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+
+.mail-filter {
+  padding: 5px;
+}
+
+.mail-filter input{
+  height: 35px;
+  font-size: 16px;
+  border-radius: 15px;
+  border:1px solid gray;
+  padding: 0 7px;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 570px) {
+  .compose-btn-mobile {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    border: none;
+    background-color: rgb(55, 55, 255);
+    border-radius: 15px;
+  }
+
+  .compose-btn-mobile span {
+    color: white;
+  }
+
+  .mail-filter {
+    padding-top: 5px;
+  }
+
+  .mail-filter input {
+    border: none;
+  }
+
+  .mail-filter input:focus-visible {
+    outline-width: 0;
+  }
+
+  .filter-container {
+    width: 80vw;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 0 10px;
+  }
+
+  .hamburger-menu {
+    min-height: 30px;
+    min-width: 30px;
+    border: none;
+    background-color: white;
+  }
+
+  .hamburger-menu span {
+    color: gray;
+    font-size: 20px;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 570px) {
+  .compose-btn-mobile {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+}
+

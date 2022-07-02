@@ -1,28 +1,38 @@
 export default {
     template: `
-    <section class="main-home"> 
-</div>
-        <div class="main-content">
-            <div class="main-books">
-                <router-link to="/book">
-                <p> read some books nerd
-                </p>
-                <!-- router link here when its ready  -->
-</div>
+        <section class="home-page app-main">
 
-            <div class="main-email">
+                <div class="home-header">
+        
+                    <h1 class="black-stroke">Appsus by R&L</h1>
+            <div class="home-content">
+                <div class="home-mail">
                 <router-link to="/mail">
-                <!-- router link here when its ready  -->
-                <p> Check your email
+                <span class="fa fa-envelope"></span>
+                <p>
                 </p>
-                <!-- router link here when its ready  -->
-            </div>
-            <div class="main-notes">
-                <!-- router link here when its ready  -->
-                <p> Get your life organized 
-                </p>
-                <!-- router link here when its ready  -->
-            </div>
+                <router-link to="/mail">Access emails here</router-link>
+            </router-link>
         </div>
-    </section>`,
+        <div class="home-books">
+            <router-link to="/book">
+                
+                <span class="fa fa-book"></span>
+                    <p>
+                    </p>
+                    <router-link to="/book">Read some books here</router-link>
+                    </router-link>
+                </div>
+                <div class="home-keep">
+                <router-link to="/keep">
+                <span class="fa fa-sticky-note"></span>
+                    <p>
+                    </p>
+                    <router-link to="/keep">Keep your notes here</router-link>
+                    </router-link>
+                </div>
+            </div>
+            </section>
+            <footer class="main-footer">CoffeRights@2022</footer>
+    `,
 }

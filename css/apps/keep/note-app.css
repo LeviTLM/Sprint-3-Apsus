@@ -1,0 +1,11 @@
+@import "./note-filter.css";
+@import "./note-list.css";
+@import "./note-preview.css";
+@import "./note-add.css";
+@import "./note-txt.css";
+
+@media (max-width: 1000px) {
+  .keep-app {
+    margin: 10px;
+  }
+}

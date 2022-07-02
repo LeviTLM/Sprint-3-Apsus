@@ -1,45 +1,59 @@
 export default {
     props: ['mails'],
     template: `
- <section v-if="mails" class="mail-menu">
-<button @click="onCompose">
-    <span class="envelope">Compose</span>
-</button>
-<router-link to="/mail">
-    <div class="mail-menu-container">
-<div @click="box('inbox')" :class="{selectedBox:currBox === 'inbox'}">Inbox</div>
-<div @click="box('sent')" :class="{selectedBox:currBox === 'sent'}">Sent</div>
-<div @click="box('starred'" :class="{selectedBox:currBox === 'starred'}">Starred</div>
-<div @click="box('read')" :class="{selectedBox:currBox === 'read'}">Read</div>
-<div @click="box('unread')" :class="{selectedBox:currBox === 'unread'}">Unread</div>
-<span>{{unreadCount}}</span>
-
-
-
-
-    </div>
-    
- </section>
-`,
+          <section class="mail-menu flex" v-if="mails">
+            <button @click="onCompose">
+              <span class="fa fa-envelope"></span>
+              Compose
+            </button>
+              <router-link to="/mail" >
+                <div class="mail-menu-nav flex ">
+                  <div  @click="box('inbox')"
+                  :class="{selectedBox: currBox ==='inbox'}">Inbox</div>
+                  <div  @click="box('sent')"
+                  :class="{selectedBox: currBox ==='sent'}">Sent</div>
+                  <div @click="box('stared')"
+                  :class="{selectedBox: currBox ==='stared'}">Starred</div>
+                  <div  @click="box('read')"
+                  :class="{selectedBox: currBox ==='read'}">Read</div>
+                  <div  @click="box('unread')"
+                  :class="{selectedBox: currBox ==='unread'}">Unread
+                  <span>
+                    {{ unreadCount }}
+                  </span>
+                  </div>
+                  <div  @click="box('all')" 
+                  :class="{selectedBox: currBox ==='all'}">All mails</div>
+                  <div @click="box('drafts')"
+                  :class="{selectedBox: currBox ==='drafts'}">Drafts</div>
+                  <div @click="box('trash')"
+                  :class="{selectedBox: currBox ==='trash'}">Trash</div>
+                  
+                  <select @change="setSort" v-model="sort" class="sort-select">
+                    <option value="date" >Sort: Date</option>
+                    <option value="subject">Sort: Subject</option>
+                    <option value="body">Sort: Mail text</option>
+                  </select>
+                </div> 
+              </router-link>
+          </section>
+      `,
     data() {
         return {
             currBox: 'inbox',
             sort: 'date',
         }
     },
-    created() {},
     methods: {
         box(box) {
             this.currBox = box
             this.$emit('mailBoxed', this.currBox)
         },
-
-        setSort() {
-            this.$emit('sort', this.sort)
-        },
-
         onCompose() {
             this.$emit('compose')
+        },
+        setSort() {
+            this.$emit('sort', this.sort)
         },
     },
     computed: {
@@ -51,5 +65,4 @@ export default {
             return count
         },
     },
-    unmounted() {},
 }

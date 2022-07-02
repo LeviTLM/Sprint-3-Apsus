@@ -1,0 +1,8 @@
+.search-online {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  

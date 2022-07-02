@@ -1,0 +1,53 @@
+.note-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto 5px;
+    border: 2px black solid;
+    border-radius: 5px;
+    max-width: 600px;
+  }
+  
+  .add-start {
+    height: 45px;
+    padding-left: 10px;
+    border: none;
+    flex-grow: 1;
+  }
+  
+  .add-start:focus-visible {
+    outline-width: 0;
+  }
+  
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-size: 30px;
+    letter-spacing: 7px;
+    transition: 0.4s;
+  }
+  
+  .actions > * {
+    color: rgb(132, 132, 132);
+    padding: 10px;
+    border: none;
+    background-color: rgba(224, 224, 224, 0);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .actions > *:hover {
+    color: black;
+    transition: 0.4s;
+  }
+  .active {
+    color: black;
+  }
+  
+  .saved {
+    color: rgb(149, 243, 8);
+    transform: scale(1.4);
+    transition: 0.4s;
+  }
